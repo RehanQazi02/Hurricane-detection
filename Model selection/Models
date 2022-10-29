@@ -76,5 +76,7 @@ long_predictions  =  [[pred[1]  for  pred  in  hurricanes_pred]  for  hurricanes
 
 
 
-
+# Predict values
+wind_predictions = model_wind.predict(X_test) lat_predictions = model_lat.predict(X_test)
+long_predictions = model_long.predict(X_test)
 
