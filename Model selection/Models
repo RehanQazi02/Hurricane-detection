@@ -36,9 +36,6 @@ plt.legend(['train', 'test'], loc='upper left') plt.show()
 return  pd.DataFrame(errors)
 
 
-# Predict values
-wind_predictions = model_wind.predict(X_test) lat_predictions = model_lat.predict(X_test)
-long_predictions = model_long.predict(X_test)
 
 
 
@@ -58,6 +55,9 @@ for prediction in long_predictions]
 y_long_test_scaled  =  [scaler.inverse_transform([[0,long[0],0,0,0,0,0,0,0,0,0]  for  lo
 for observation in y_test_long]
 
+# Predict values
+wind_predictions = model_wind.predict(X_test) lat_predictions = model_lat.predict(X_test)
+long_predictions = model_long.predict(X_test)
 
 # Record wind predictions and observations
 print("Wind")
